@@ -7,7 +7,7 @@ names[4]="shivam";
 names[5]="jen";
 names[6]="pqr";
 names[7]="st";
-n
+
 
 
 for (var i = 0; i < names.length; i++) {
