@@ -1,0 +1,135 @@
+/* ================= GLOBAL ================= */
+body {
+  font-family: 'Oxygen', sans-serif;
+  background-color: #61122f;
+  color: #fff;
+}
+
+/* ================= YOUTUBE STYLE LOADER ================= */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+}
+
+.loader-bar {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-color: red;
+  animation: loadBar 2s linear forwards;
+}
+
+@keyframes loadBar {
+  to { width: 100%; }
+}
+
+#page-loader.loaded {
+  display: none;
+}
+
+/* ================= CONTENT FADE-IN ================= */
+.hidden-content {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hidden-content.show {
+  opacity: 1;
+}
+
+/* ================= HEADER ================= */
+#header-nav {
+  background-color: #f6b319;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img {
+  background: url('../images/logo.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand h1 {
+  font-family: 'Lora', serif;
+  color: #557c3e;
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.navbar-brand p {
+  color: #000;
+  font-size: .8em;
+  margin-top: 5px;
+}
+
+/* ================= JUMBOTRON ================= */
+.jumbotron {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.jumbotron img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ================= HOME TILES ================= */
+#home-tiles {
+  margin-top: 30px;
+}
+
+.tile {
+  position: relative;
+  border: 2px solid #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.tile img {
+  width: 100%;
+  transition: transform .3s ease;
+}
+
+.tile:hover img {
+  transform: scale(1.05);
+}
+
+.tile span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+/* ================= FOOTER ================= */
+.panel-footer {
+  background-color: #222;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.panel-footer span {
+  font-size: 1.3em;
+}
+
+.panel-footer p {
+  font-style: italic;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+  #logo-img {
+    display: none;
+  }
+}
