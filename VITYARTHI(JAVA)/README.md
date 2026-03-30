@@ -1,86 +1,63 @@
-Campus Course & Records Manager (CCRM):
+Campus. Records Manager (CCRM)
 
-CCRM is a console-based Java tool for managing the essentials of higher education data. It handles students, courses,     enrollments, and grades, and keeps everything safe with reliable file operations.
+Campus Records Manager is a console-based Java application. It helps manage the data and operations of a college or university system. The Campus Records Manager handles student records, courses, enrollments and grades. It also keeps the data safe using file handling.
 
-Project Overview:
-This project is a practical showcase of both basic and advanced Java skills. You’ll see object-oriented programming, modern APIs, and file handling woven into one functional app.
-What you can do:
-- Student Management: Create, list, update, and deactivate students.
-- Course Management: Add and edit courses, deactivate them, and assign instructors.
-- Enrollment & Grading: Control enrollments so credit limits aren’t exceeded; manage grades and GPA calculations.
-- File Operations: Import/export data as CSV files using NIO.2 for modern file handling.
-- Backup System: Make timestamped backups, including deep directory operations, to secure your data.
-- System Reports: Get stats and reports for a broad overview.
+The Campus Records Manager is a project that uses both advanced Java concepts together in one working system. The Campus Records Manager shows how object-oriented programming works in a setup along with file handling and newer Java APIs. The Campus Records Manager is not overly complex. It still gives an idea of how such systems are structured.
 
-A Brief Java History:
+Key Features of the Campus Records Manager include:
 
-Java keeps evolving to meet the needs of developers. Here’s how things unfolded:
-- 1995: Java 1.0 arrived, introducing “Write Once, Run Anywhere” (WORA).
-- 1997: Java 1.1 launched features like inner classes and JDBC.
-- 1998: Java 2 (J2SE, J2EE, J2ME) split the platform into Standard, Enterprise, and Micro Editions.
-- 2004: Java 5 (J2SE 5.0) brought generics, enums, and the enhanced for-loop.
-- 2014: Java 8 shook things up with lambda expressions and the Streams API, bringing functional programming to Java.
-- 2017: Java 9 added the Java Platform Module System (JPMS), modularizing the JDK.
-- 2018: Java 11 became LTS under the new release schedule, pruning some old Enterprise Java modules.
-- 2023: Java 21 released with virtual threads and improved pattern matching.
+* Student Management: You can create, view, update and even deactivate student records using the Campus Records Manager.
 
-Java Platforms Explained
-- Java SE: Core APIs for desktop, server, and embedded development—CCRM uses this.
-- Java EE: For big enterprise systems; provides APIs for servlets, JSPs, web services.
-- Java ME: Tailored for mobile and embedded devices with limited resources.
+* Course Management: Courses can be created, updated or deactivated and instructors can be assigned using the Campus Records Manager.
 
-Java Architecture: JDK, JRE, JVM
+* Grading: Students can enroll in courses with credit limits checked and grading plus GPA calculation is handled by the Campus Records Manager.
 
-These three are the backbone of Java:
-- JDK (Java Development Kit): Your full toolset—compiler, debugger, and utilities to build Java programs.
-- JRE (Java Runtime Environment): Lets you run Java programs; includes the JVM and class libraries, but not development tools.
-- JVM (Java Virtual Machine): Converts platform-independent bytecode into code your computer understands—making “Write Once, Run Anywhere” reality.
+* File Operations: Data can be exported in CSV format using NIO.2, which's a modern file handling method used by the Campus Records Manager.
 
-Getting Started
-Prerequisites:
-- Java 8 or later
-- Any Java IDE (Eclipse, IntelliJ IDEA, VS Code)
-- Command-line access
+* Backup System: The Campus Records Manager creates backups with timestamps, including directory copying so data is not lost easily.
 
- \#\#\#\# Installation & Setup
+* System Reports: The Campus Records Manager generates reports and stats to give an idea of what's going on in the system.
 
-1\.  Clone or download the project  
-    'git clone \<repository-url\>'  
-    'cd campus-course-records-manager'
+The Evolution of Java is interesting. Java has changed a lot over time. Here is a short timeline of the points:
 
-2\.  Compile the project  
-    'javac \-d . src/main/java/com/ccrm/\*.java src/main/java/com/ccrm/\*\*/\*.java'
+1995: Java 1.0 was released, which introduced the "Write Once Run Anywhere" concept.
 
-3\.  Run the application  
-    'java com.ccrm.CampusCourseRecordsManager'
+1997: Java 1.1 was released, which added features like classes and JDBC.
 
-    
-Setting Up in Eclipse IDE
-1. Open Eclipse, go to File > Import…
-2. Choose Git > Projects from Git (with smart import), click Next.
-3. Select Clone URI, paste the repo URL, and click Next.
-4. Pick the main branch, click Next.
-5. Set your local directory, click Next.
-6. Eclipse should auto-recognize it as a Java project. Click Finish.
-Once in your workspace, right-click 'CampusCourseRecordsManager.java' in Package Explorer, then choose Run As > Java Application.
+1998: Java 2 was released, which divided Java into platforms.
 
-Project Requirements Mapping
- core concepts in the code:
-- Encapsulation: Private fields + public getters/setters in 'model/Person.java', 'model/Student.java'.
-- Inheritance: Abstract 'Person' is the base for 'Student' and 'Instructor'—they share properties and behaviors.
-- Abstraction: 'Person' sets abstract methods like 'getRole()' which subclasses must define.
-- Polymorphism: 'Person' references hold either a 'Student' or 'Instructor'—makes code flexible.
-- Singleton Pattern: The 'DataStore' manages data with a single instance throughout the app.
-- Builder Pattern: 'CourseBuilder', 'TranscriptBuilder' let you construct complex objects step by step.
-- Custom Exceptions: 'MaxCreditLimitExceededException' delivers precise error handling.
-- NIO.2: File operations via 'Path' and 'Files' APIs in 'utils/FileUtils.java', 'utils/BackupUtils.java'.
-- Streams: Stream API used for filtering and data processing in 'core/DataStore.java', 'services/StudentService.java'.
-- Date/Time API: 'LocalDate' manages dates in 'model/Student.java' and 'model/Enrollment.java'.
-- Enums: 'Semester.java', 'Grade.java' set up type-safe constants with data and methods.
-- Recursion: Recursive directory functions appear in 'utils/BackupUtils.java'.
+2004: Java 5 was released, which included generics, enums, enhanced for-loop and more.
 
-Enabling Assertions:
-Turn assertions on with the '-ea' flag in your run command. Handy for debugging and internal checks.
-Example:
-'java -ea com.ccrm.CampusCourseRecordsManager'
+2014: Java 8 was released, which was very important with expressions and Streams API.
 
+2017: Java 9 was released, which introduced the module system.
+
+2018: Java 11 was released, which was an LTS release that removed some modules.
+
+2023: Java 21 is the LTS, which includes virtual threads and improved pattern matching.
+
+Java Platform Comparison is important. Here is an overview of Java platforms:
+
+Java SE is used for general-purpose applications, like the Campus Records Manager.
+
+Java EE is used for large-scale enterprise apps, like web apps and APIs.
+
+Java ME is designed for devices with resources.
+
+The Campus Records Manager uses Java, which works on three components:
+
+JDK is a toolkit for developers, including a compiler and other tools.
+
+JRE is needed to run Java programs. It contains the JVM and libraries.
+
+JVM converts bytecode into machine-level instructions so it runs on any system.
+
+To get started with the Campus Records Manager you need to have Java 8 or above. You also need any IDE, like Eclipse, IntelliJ or VS Code and command-line access.
+
+To install the Campus Records Manager you can download the project. Use the command git clone to clone the project. Then use cd to move into the project directory. To compile the project use the command javac. To run the application use the command java com.ccrm.CampusCourseRecordsManager.
+
+To set up the project in Eclipse go to File and Import. Select. Then Projects from Git. Choose Clone URI. Paste the repository link. Select the branch, the branch. Choose a directory and finish. Eclipse will auto-detect the Java project.
+
+The Campus Records Manager uses OOP concepts in the project, including encapsulation, inheritance, abstraction and polymorphism. The Singleton Pattern is used to ensure one instance manages data. The Builder Pattern is used in CourseBuilder and TranscriptBuilder. Custom Exceptions are used, like MaxCreditLimitExceededException. NIO.2 is used for file handling using Path and Files APIs. Streams are used for filtering and processing data. The Date/Time API is used for handling dates with LocalDate. Enums are used for fixed constants like Semester and Grade. Recursion is used in the utility for directory traversal.
+
+You can enable assertions using the -ea flag while running the program. This is useful for debugging and checking assumptions during execution. For example use the command java -ea com.ccrm.CampusCourseRecordsManager to enable assertions. The Campus Records Manager is a tool, for managing college or university systems.
